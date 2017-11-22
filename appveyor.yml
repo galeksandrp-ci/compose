@@ -1,6 +1,8 @@
 
 version: '{branch}-{build}'
 
+image: Visual Studio 2017
+
 install:
   - "SET PATH=C:\\Python33-x64;C:\\Python33-x64\\Scripts;%PATH%"
   - "python --version"
@@ -10,7 +12,6 @@ install:
 build: false
 
 test_script:
-  - "tox -e py27,py34 -- tests/unit"
   - ps: ".\\script\\build\\windows.ps1"
 
 artifacts:
